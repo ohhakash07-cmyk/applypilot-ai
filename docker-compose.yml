@@ -1,0 +1,12 @@
+services:
+  applypilot:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+    volumes:
+      - applypilot_data:/app/data
+    restart: unless-stopped
+volumes:
+  applypilot_data:
